@@ -1,0 +1,59 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "OpenOCD Debug",
+            "type": "gdb",
+            "request": "attach",
+            "executable": "${workspaceRoot}/build/BEASTv2.elf",
+            "target": ":3333",
+            "remote": true,
+            "cwd": "${workspaceRoot}",
+            "autorun": [
+                // "interrupt",
+                "monitor reset halt",
+                // "load",
+                "break app_main"
+            ],
+            // "debugServerPath": "/usr/local/share/openocd", 
+            // "debugServerArgs": "-s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg", 
+            "gdbpath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
+            // "preLaunchTask": "Build",
+            "preLaunchTask": "Flash"
+        },
+        {
+            "name": "GDB attached to OpenOCD",
+            "type": "cppdbg",
+            "request": "launch",
+            // "launchOptionType": "Local",
+            "stopAtEntry": false,
+            "launchCompleteCommand": "exec-run",
+            "MIMode": "gdb",
+            "miDebuggerPath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
+            "program": "${workspaceRoot}/build/BEASTv2.elf",
+            "setupCommands": [
+                {
+                    "text": "target remote localhost:3333"
+                },
+                {
+                    "text": "file ${workspaceRoot}/build/BEASTv2.elf"
+                },
+                {
+                    "text": "monitor reset halt"
+                }
+            ],
+            // "customLaunchSetupCommands": [
+            //     {"text": "monitor reset init"} 
+            // ],
+            // "launchCompleteCommand": "exec-continue", 
+            "debugServerPath": "openocd",
+            "debugServerArgs": "-s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg",
+            // "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware", 
+            // "filterStderr": true,
+            // "preLaunchTask": "Build",
+            // "preLaunchTask": "CBF",
+            "cwd": "${workspaceRoot}"
+        }
+    ]
+}
+//https://github.com/Microsoft/vscode-cpptools/blob/master/launch.md

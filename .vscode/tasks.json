@@ -1,0 +1,55 @@
+{
+    "version": "0.1.0",
+    "command": "bash",
+    "args": ["-c"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "options": {
+        "cwd": "${workspaceRoot}",
+        "env": { 
+            "IDF_PATH" : "/home/fhfs/ESP/esp-idf", 
+            "PATH" : "${env.PATH}:/home/fhfs/ESP/xtensa-esp32-elf/bin" 
+        }
+    },
+    "tasks": [
+        {
+            "taskName": "Build",
+            "args": ["make -j8 all"],
+            "isBuildCommand": true,
+            "problemMatcher": {
+                "owner": "cpp",
+                "fileLocation": "absolute",
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                    "file": 1,
+                    "line": 2,
+                    "column": 3,
+                    "severity": 4,
+                    "message": 5
+                }
+            }
+        },
+        {
+            "taskName": "Clean",
+            "args": ["make clean"]
+        },
+        {
+            "taskName": "Monitor",
+            "args": ["make monitor"]
+        },
+        {
+            "taskName": "Flash",
+            "args": ["make flash"]
+        },
+        {
+            "taskName": "OpenOCD",
+            "suppressTaskName": true,
+            "args" : ["openocd -s /home/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg"]
+        },
+        {
+            "taskName": "CBF",//clean build flash
+            "args": ["make clean && make -j8 all && make flash"]
+        }
+    ]
+}
