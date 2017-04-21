@@ -6,7 +6,7 @@ This is a template application to be used with `Espressif IoT Development Framew
 Set all the environment variables in Task.json 
 
 
-.. code::
+.. code:: 
     "options": {
         "cwd": "${workspaceRoot}",
         "env": {
