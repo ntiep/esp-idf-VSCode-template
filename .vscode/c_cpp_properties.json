@@ -10,7 +10,8 @@
                 "databaseFilename": ""
             }
         }
-    ],
+    ]        
+    ,
     "clang_format": {
         "style": "file",
         "fallback-style": "LLVM",
