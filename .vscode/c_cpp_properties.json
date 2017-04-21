@@ -2,10 +2,12 @@
     "configurations": [
         {
             "name": "Linux",
-            "includePath": ["/home/fhfs/ESP/esp-idf/components/"],
-            "browse" : {
-                "limitSymbolsToIncludedHeaders" : true,
-                "databaseFilename" : "" 
+            "includePath": [
+                "${IDF_PATH}/components/"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
             }
         }
     ],

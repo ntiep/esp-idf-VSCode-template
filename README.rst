@@ -1,12 +1,19 @@
-ESP-IDF template app
+ESP-IDF template app for Visual Studio Code
 ====================
 
 This is a template application to be used with `Espressif IoT Development Framework`_ (ESP-IDF). 
 
-Please check ESP-IDF docs for getting started instructions.
+Set all the environment variables in Task.json 
 
-Code in this repository is Copyright (C) 2016 Espressif Systems, licensed under the Apache License 2.0 as described in the file LICENSE.
-
-.. _Espressif IoT Development Framework: https://github.com/espressif/esp-idf
-
-
+<code>
+    "options": {
+        "cwd": "${workspaceRoot}",
+        "env": {
+            "IDF_PATH": "/home/fhfs/ESP/esp-idf",
+            "PATH": "${env.PATH}:/home/fhfs/ESP/xtensa-esp32-elf/bin",
+            "projectname": "app-template",
+            "openOCDPath": "/home/fhfs/ESP/openocd-esp32",
+            "XtensaEsp32ELFBinPath": "/home/fhfs/ESP/xtensa-esp32-elf/bin"
+        }
+    },
+</code>

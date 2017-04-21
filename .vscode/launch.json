@@ -17,9 +17,10 @@
             ],
             // "debugServerPath": "/usr/local/share/openocd", 
             // "debugServerArgs": "-s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg", 
+            // "preLaunchTask": "OpenOCD",
             // "preLaunchTask": "Build",
             // "preLaunchTask": "Flash",
-            "gdbpath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb"
+            "gdbpath": "${XtensaEsp32ELFBinPath}/xtensa-esp32-elf-gdb"
         },
         {
             "name": "GDB attached to OpenOCD",
@@ -29,14 +30,14 @@
             "stopAtEntry": false,
             "launchCompleteCommand": "exec-run",
             "MIMode": "gdb",
-            "miDebuggerPath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
-            "program": "${workspaceRoot}/build/BEASTv2.elf",
+            "miDebuggerPath": "${XtensaEsp32ELFBinPath}/xtensa-esp32-elf-gdb",
+            "program": "${workspaceRoot}/build/${projectname}.elf",
             "setupCommands": [
                 {
                     "text": "target remote localhost:3333"
                 },
                 {
-                    "text": "file ${workspaceRoot}/build/BEASTv2.elf"
+                    "text": "file ${workspaceRoot}/build/${projectname}.elf"
                 },
                 {
                     "text": "monitor reset halt"
