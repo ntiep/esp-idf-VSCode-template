@@ -56,7 +56,7 @@
             "taskName": "OpenOCD",
             "suppressTaskName": true,
             "args": [
-                "openocd -s /home/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg -c \"adapter_khz 3000\""
+                "openocd -s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg" //-c \"adapter_khz 3000\"
             ]
         },
         {
