@@ -5,9 +5,7 @@ This is a template application to be used with `Espressif IoT Development Framew
 
 Set all the environment variables in Task.json 
 
-
-```
-    "options": {
+    "options": {::
         "cwd": "${workspaceRoot}",
         "env": {
             "IDF_PATH": "/home/fhfs/ESP/esp-idf",
@@ -17,4 +15,3 @@ Set all the environment variables in Task.json
             "XtensaEsp32ELFBinPath": "/home/fhfs/ESP/xtensa-esp32-elf/bin"
         }
     },
-```
