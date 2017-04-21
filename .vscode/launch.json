@@ -17,9 +17,9 @@
             ],
             // "debugServerPath": "/usr/local/share/openocd", 
             // "debugServerArgs": "-s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg", 
-            "gdbpath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb",
             // "preLaunchTask": "Build",
-            "preLaunchTask": "Flash"
+            // "preLaunchTask": "Flash",
+            "gdbpath": "/home/fhfs/ESP/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb"
         },
         {
             "name": "GDB attached to OpenOCD",
@@ -46,8 +46,6 @@
             //     {"text": "monitor reset init"} 
             // ],
             // "launchCompleteCommand": "exec-continue", 
-            "debugServerPath": "openocd",
-            "debugServerArgs": "-s /home/fhfs/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg",
             // "serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware", 
             // "filterStderr": true,
             // "preLaunchTask": "Build",

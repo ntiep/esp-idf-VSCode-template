@@ -1,21 +1,25 @@
 {
     "version": "0.1.0",
     "command": "bash",
-    "args": ["-c"],
+    "args": [
+        "-c"
+    ],
     "isShellCommand": true,
     "showOutput": "always",
     "suppressTaskName": true,
     "options": {
         "cwd": "${workspaceRoot}",
-        "env": { 
-            "IDF_PATH" : "/home/fhfs/ESP/esp-idf", 
-            "PATH" : "${env.PATH}:/home/fhfs/ESP/xtensa-esp32-elf/bin" 
+        "env": {
+            "IDF_PATH": "/home/fhfs/ESP/esp-idf",
+            "PATH": "${env.PATH}:/home/fhfs/ESP/xtensa-esp32-elf/bin"
         }
     },
     "tasks": [
         {
             "taskName": "Build",
-            "args": ["make -j8 all"],
+            "args": [
+                "make -j8 all"
+            ],
             "isBuildCommand": true,
             "problemMatcher": {
                 "owner": "cpp",
@@ -32,24 +36,34 @@
         },
         {
             "taskName": "Clean",
-            "args": ["make clean"]
+            "args": [
+                "make clean"
+            ]
         },
         {
             "taskName": "Monitor",
-            "args": ["make monitor"]
+            "args": [
+                "make monitor"
+            ]
         },
         {
             "taskName": "Flash",
-            "args": ["make flash"]
+            "args": [
+                "make flash"
+            ]
         },
         {
             "taskName": "OpenOCD",
             "suppressTaskName": true,
-            "args" : ["openocd -s /home/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg"]
+            "args": [
+                "openocd -s /home/ESP/openocd-esp32/tcl -f /home/fhfs/ESP/openocd-esp32/esp32.cfg -c \"adapter_khz 3000\""
+            ]
         },
         {
-            "taskName": "CBF",//clean build flash
-            "args": ["make clean && make -j8 all && make flash"]
+            "taskName": "CBF", //clean build flash
+            "args": [
+                "make clean && make -j8 all && make flash"
+            ]
         }
     ]
 }
