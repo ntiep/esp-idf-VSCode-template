@@ -17,7 +17,6 @@ Debug Console will show the GDB Output.
 Tasks output will show the OpenOCD Output.
 
 My routine is:
-
 .. code::
     run "task Build"
     Set my esp32 in upload mode.
@@ -27,7 +26,6 @@ My routine is:
     start debugging
 
 My devices are:
-
 .. code::
     OS: arch linux x64
     esp32: Pycom LoPy
