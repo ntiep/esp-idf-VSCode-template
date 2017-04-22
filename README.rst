@@ -16,7 +16,9 @@ You can add a keyboard shortcut to terminate a task. By adding the following lin
 Debug Console will show the GDB Output.
 Tasks output will show the OpenOCD Output.
 
-.. My routine is::
+My routine is:
+
+.. code::
     run "task Build"
     Set my esp32 in upload mode.
     run "task Flash"
@@ -24,7 +26,9 @@ Tasks output will show the OpenOCD Output.
     reset the esp32
     start debugging
 
-.. My devices are::
+My devices are:
+
+.. code::
     OS: arch linux x64
     esp32: Pycom LoPy
     Debugger: Olimex ARM-USB-OCD-H
