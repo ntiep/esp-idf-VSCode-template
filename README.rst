@@ -17,7 +17,7 @@ Debug Console will show the GDB Output.
 Tasks output will show the OpenOCD Output.
 
 My routine is:
-.. code::
+.. ::
     run "task Build"
     Set my esp32 in upload mode.
     run "task Flash"
