@@ -17,17 +17,16 @@ Debug Console will show the GDB Output.
 Tasks output will show the OpenOCD Output.
 
 My routine is:
-
 .. code::
-``run "task Build"``
-``Set my esp32 in upload mode.``
-``run "task Flash"``
-``run "task OpenOCD"``
-``reset the esp32``
-``start debugging``
+    ``run "task Build"``
+    ``Set my esp32 in upload mode.``
+    ``run "task Flash"``
+    ``run "task OpenOCD"``
+    ``reset the esp32``
+    ``start debugging``
 
-.. code::
 My devices are:
-``OS: arch linux x64``
-``esp32: Pycom LoPy``
-``Debugger: Olimex ARM-USB-OCD-H``
+.. code::
+    ``OS: arch linux x64``
+    ``esp32: Pycom LoPy``
+    ``Debugger: Olimex ARM-USB-OCD-H``
