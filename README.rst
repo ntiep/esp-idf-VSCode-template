@@ -26,7 +26,7 @@ My routine is:
     start debugging
 
 My devices are:
-.. code::
+.. ::
     OS: arch linux x64
     esp32: Pycom LoPy
     Debugger: Olimex ARM-USB-OCD-H
