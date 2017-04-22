@@ -45,13 +45,13 @@
                 "make clean"
             ]
         },
-        {
-            "taskName": "Monitor",
-            "suppressTaskName": true,
-            "args": [
-                "make monitor"
-            ]
-        },
+        // {    // Doesn't work, cannot intergrate monitor in vscode console
+        //     "taskName": "Monitor",
+        //     "suppressTaskName": true,
+        //     "args": [
+        //         "make monitor"
+        //     ]
+        // },
         {
             "taskName": "Flash",
             "suppressTaskName": true,
