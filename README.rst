@@ -18,6 +18,7 @@ Tasks output will show the OpenOCD Output.
 
 My routine is:
 
+.. code::
 ``run "task Build"``
 ``Set my esp32 in upload mode.``
 ``run "task Flash"``
@@ -25,6 +26,7 @@ My routine is:
 ``reset the esp32``
 ``start debugging``
 
+.. code::
 My devices are:
 ``OS: arch linux x64``
 ``esp32: Pycom LoPy``
