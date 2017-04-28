@@ -3,15 +3,17 @@
         {
             "name": "Linux",
             "includePath": [
-                "${IDF_PATH}/components/"
+                "${IDF_PATH}/components/",
+                "${XTENSA_PATH}/include"
             ],
             "browse": {
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
+                "databaseFilename": "",
+                "path": [
+                    "${IDF_PATH}/components/"
+                ]
             }
         }
-    ]        
-    ,
+    ],
     "clang_format": {
         "style": "file",
         "fallback-style": "LLVM",
