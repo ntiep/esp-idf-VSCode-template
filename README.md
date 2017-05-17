@@ -46,3 +46,6 @@ The folder esp-idf contains modifications I have made to ``idf_monitor.py``, an 
 
 ``make monitor`` will now output a log file in the ``logs/`` directory, and functions like the original.   
 ``make log`` also outputs a log file in ``logs/`` but does not contain a console. It pipes all output to stderr which can be read by VSCode task window.
+
+## Windows Specific
+Msys2 needs to be installed and its path to bash.exe needs to be specified.
