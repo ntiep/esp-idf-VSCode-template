@@ -1,23 +1,29 @@
 {
-	"configurations": [
-		{
-			"name": "Linux",
-			"includePath": [
-				"C:/IoT/thisProject/esp-idf/components/",
-				"C:/IoT/thisProject/esp-idf/components/log/include",
-				"C:/IoT/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include",
-				"C:/IoT/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/5.2.0"
-			],
-			"browse": {
-				"limitSymbolsToIncludedHeaders": true,
-				"databaseFilename": "",
-				"path": [
-					"C:/IoT/thisProject/esp-idf/components/",
-					"C:/IoT/thisProject/esp-idf/components/log/include",
-					"C:/IoT/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include",
-					"C:/IoT/xtensa-esp32-elf/xtensa-esp32-elf/include/c++/5.2.0"
-				]
-			}
-		}
-	]
+    "configurations": [
+        {
+            "name": "ESP32-Win",
+            "includePath": [
+                "${workspaceRoot}",
+                "C:/msys32/opt/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include",
+                "C:/msys32/opt/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed",
+                "C:/msys32/opt/xtensa-esp32-elf/xtensa-esp32-elf/include",
+                "C:/msys32/opt/xtensa-esp32-elf/xtensa-esp32-elf/sysroot/usr/include",
+                "C:/msys32/home/ntiep/esp32/esp-idf/components"
+            ],
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceRoot}",
+                    "C:/msys32/opt/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include",
+                    "C:/msys32/opt/xtensa-esp32-elf/lib/gcc/xtensa-esp32-elf/5.2.0/include-fixed",
+                    "C:/msys32/opt/xtensa-esp32-elf/xtensa-esp32-elf/include",
+                    "C:/msys32/opt/xtensa-esp32-elf/xtensa-esp32-elf/sysroot/usr/include",
+                    "C:/msys32/home/ntiep/esp32/esp-idf/components"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": "${workspaceRoot}/.vscode/browse.vc.db"
+            }
+        }
+    ],
+    "version": 4
 }
